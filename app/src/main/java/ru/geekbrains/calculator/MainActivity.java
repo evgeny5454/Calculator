@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     NumbersBox<Integer, Integer> numbersBox = new NumbersBox<>(Num1, Num2);
     String firstNumber;
-    String secondNumber;
+
     String resultString;
 
     boolean userFirstNumberInput = true;
@@ -152,8 +152,6 @@ public class MainActivity extends AppCompatActivity {
         int number = Integer.parseInt(firstNumber);
         numbersBox.setObj1(number);
         num.clear();
-
-
     }
     public void ListenerDivision(View view) {
 
