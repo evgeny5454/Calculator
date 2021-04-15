@@ -21,42 +21,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="341dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <Button
         android:id="@+id/button_7"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:onClick="ListenerBut7"
         android:text="@string/_7"
         android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:onClick="ListenerBut7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
     <Button
         android:id="@+id/button_8"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="ListenerBut8"
         android:text="@string/_8"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_7"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:onClick="ListenerBut8"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button_9"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="ListenerBut9"
         android:text="@string/_9"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_8"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:onClick="ListenerBut9"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button_4"
@@ -161,12 +174,13 @@
         android:id="@+id/multiplication"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:onClick="ListenerMultiplication"
         android:text="@string/multiplication"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/division"
@@ -176,7 +190,8 @@
         android:text="@string/division"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_6"
-        app:layout_constraintTop_toBottomOf="@+id/multiplication" />
+        app:layout_constraintTop_toBottomOf="@+id/multiplication"
+        android:onClick="ListenerDivision"/>
 
     <Button
         android:id="@+id/minus"
@@ -186,7 +201,8 @@
         android:text="@string/minus"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_3"
-        app:layout_constraintTop_toBottomOf="@+id/division" />
+        app:layout_constraintTop_toBottomOf="@+id/division"
+        android:onClick="ListenerMinus"/>
 
     <Button
         android:id="@+id/plus"
@@ -196,16 +212,17 @@
         android:text="@string/plus"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_point"
-        app:layout_constraintTop_toBottomOf="@+id/minus" />
+        app:layout_constraintTop_toBottomOf="@+id/minus"
+        android:onClick="ListenerPlus"/>
 
     <Button
         android:id="@+id/equality"
         android:layout_width="341dp"
         android:layout_height="80dp"
         android:layout_marginStart="7dp"
-
         android:text="@string/equality"
         android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_C" />
+        app:layout_constraintTop_toBottomOf="@+id/button_C"
+        android:onClick="ListenerEquality"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
