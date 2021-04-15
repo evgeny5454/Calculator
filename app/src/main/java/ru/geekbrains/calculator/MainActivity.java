@@ -17,10 +17,12 @@ public class MainActivity extends AppCompatActivity {
     private int Num2;
 
     NumbersBox<Integer, Integer> numbersBox = new NumbersBox<>(Num1, Num2);
+
     String firstNumber;
-
+    String secondNumber;
     String resultString;
-
+    String resultString2;
+    String logic;
     boolean userFirstNumberInput = true;
 
     @Override
@@ -130,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         num.clear();
         textView.setText("0");
         textView2.setText("");
+        logic = "";
     }
     public void ListenerButPoint(View view) {
         TextView textView = (TextView) findViewById(R.id.textView);
@@ -144,30 +147,129 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textView);
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         StringBuilder userInputBuilder = new StringBuilder();
+        logic = "*";
         for (String s : num) {
             userInputBuilder.append(s);
         }
         textView.setText("");
+        textView2.setText(userInputBuilder);
         firstNumber = userInputBuilder.toString();
-        int number = Integer.parseInt(firstNumber);
-        numbersBox.setObj1(number);
-        num.clear();
+        secondNumber = userInputBuilder.toString();
+        if (userFirstNumberInput){
+            int number = Integer.parseInt(firstNumber);
+            numbersBox.setObj1(number);
+            num.clear();
+            userFirstNumberInput = false;
+        }
     }
     public void ListenerDivision(View view) {
-
+        TextView textView = (TextView) findViewById(R.id.textView);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        StringBuilder userInputBuilder = new StringBuilder();
+        logic = "/";
+        for (String s : num) {
+            userInputBuilder.append(s);
+        }
+        textView.setText("");
+        textView2.setText(userInputBuilder);
+        firstNumber = userInputBuilder.toString();
+        secondNumber = userInputBuilder.toString();
+        if (userFirstNumberInput){
+            int number = Integer.parseInt(firstNumber);
+            numbersBox.setObj1(number);
+            num.clear();
+            userFirstNumberInput = false;
+        }
     }
     public void ListenerMinus (View view){
-
+        TextView textView = (TextView) findViewById(R.id.textView);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        StringBuilder userInputBuilder = new StringBuilder();
+        logic = "-";
+        for (String s : num) {
+            userInputBuilder.append(s);
+        }
+        textView.setText("");
+        textView2.setText(userInputBuilder);
+        firstNumber = userInputBuilder.toString();
+        secondNumber = userInputBuilder.toString();
+        if (userFirstNumberInput){
+            int number = Integer.parseInt(firstNumber);
+            numbersBox.setObj1(number);
+            num.clear();
+            userFirstNumberInput = false;
+        }
     }
     public void ListenerPlus (View view){
-
+        TextView textView = (TextView) findViewById(R.id.textView);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        StringBuilder userInputBuilder = new StringBuilder();
+        logic = "+";
+        for (String s : num) {
+            userInputBuilder.append(s);
+        }
+        textView.setText("");
+        textView2.setText(userInputBuilder);
+        firstNumber = userInputBuilder.toString();
+        secondNumber = userInputBuilder.toString();
+        if (userFirstNumberInput){
+            int number = Integer.parseInt(firstNumber);
+            numbersBox.setObj1(number);
+            num.clear();
+            userFirstNumberInput = false;
+        }
     }
     public void ListenerEquality (View view){
         TextView textView = (TextView) findViewById(R.id.textView);
         TextView textView2 = (TextView) findViewById(R.id.textView2);
-        resultString = Integer.toString(numbersBox.getObj1());
-        textView.setText(resultString);
-        textView2.setText("");
+
+        StringBuilder userInputBuilder = new StringBuilder();
+        for (String s : num) {
+            userInputBuilder.append(s);
+        }
+        textView.setText("");
+        textView2.setText(userInputBuilder);
+        firstNumber = userInputBuilder.toString();
+        secondNumber = userInputBuilder.toString();
+        if (userFirstNumberInput = false){
+            int number = Integer.parseInt(firstNumber);
+            numbersBox.setObj1(number);
+            num.clear();
+        } else {
+            int number = Integer.parseInt(secondNumber);
+            numbersBox.setObj2(number);
+            num.clear();
+            userFirstNumberInput = true;
+        }
+        int a;
+
+        switch (logic) {
+            case ("*"):
+              a = numbersBox.getObj1()*numbersBox.getObj2();
+              resultString = Integer.toString(a);
+              textView.setText(resultString);
+              break;
+            case ("+"):
+                a = numbersBox.getObj1()+numbersBox.getObj2();
+                resultString = Integer.toString(a);
+                textView.setText(resultString);
+                break;
+            case ("-"):
+                a = numbersBox.getObj1()-numbersBox.getObj2();
+                resultString = Integer.toString(a);
+                textView.setText(resultString);
+                break;
+            case ("/"):
+                a = numbersBox.getObj1()/numbersBox.getObj2();
+                resultString = Integer.toString(a);
+                textView.setText(resultString);
+                break;
+        }
+        //resultString = Integer.toString(numbersBox.getObj1());
+        //resultString2 = Integer.toString(numbersBox.getObj2());
+        //textView.setText("OBJ1 " + resultString);// показывает 1 введенное число
+        //textView2.setText("OBJ2 " + resultString2);// показывает 2 введенное число
+
     }
 }
 
