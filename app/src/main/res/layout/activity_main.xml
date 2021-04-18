@@ -168,15 +168,15 @@
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_0"
         app:layout_constraintTop_toBottomOf="@+id/button_3"
-        android:onClick="ListenerButPoint"/>
+       />
 
     <Button
         android:id="@+id/multiplication"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="12dp"
-        android:onClick="ListenerMultiplication"
+
         android:text="@string/multiplication"
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_9"
@@ -191,7 +191,7 @@
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_6"
         app:layout_constraintTop_toBottomOf="@+id/multiplication"
-        android:onClick="ListenerDivision"/>
+        />
 
     <Button
         android:id="@+id/minus"
@@ -202,7 +202,7 @@
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_3"
         app:layout_constraintTop_toBottomOf="@+id/division"
-        android:onClick="ListenerMinus"/>
+        />
 
     <Button
         android:id="@+id/plus"
@@ -213,7 +213,7 @@
         android:textSize="50sp"
         app:layout_constraintStart_toEndOf="@+id/button_point"
         app:layout_constraintTop_toBottomOf="@+id/minus"
-        android:onClick="ListenerPlus"/>
+       />
 
     <Button
         android:id="@+id/equality"
@@ -224,5 +224,5 @@
         android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_C"
-        android:onClick="ListenerEquality"/>
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
