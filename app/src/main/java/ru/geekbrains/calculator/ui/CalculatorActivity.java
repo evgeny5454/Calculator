@@ -28,107 +28,106 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         resultText = findViewById(R.id.textView);
         //inputText = findViewById(R.id.textView2);
 
-        findViewById(R.id.button_0).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_0Click();
 
             }
         });
-        findViewById(R.id.button_1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_1Click();
 
             }
         });
-        findViewById(R.id.button_2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_2Click();
 
             }
         });
-        findViewById(R.id.button_3).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_3Click();
             }
         });
-        findViewById(R.id.button_4).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_4Click();
             }
         });
-        findViewById(R.id.button_5).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_5Click();
             }
         });
-        findViewById(R.id.button_6).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_6Click();
             }
         });
-        findViewById(R.id.button_7).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_7Click();
             }
         });
-        findViewById(R.id.button_8).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_8).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_8Click();
             }
         });
-        findViewById(R.id.button_9).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBut_9Click();
             }
         });
-        findViewById(R.id.button_C).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_C).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButClealClick();
             }
         });
-        findViewById(R.id.button_point).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_POINT).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButPointClick();
             }
         });
-        findViewById(R.id.plus).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_PLUS).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButPlusClick();
-
             }
         });
-        findViewById(R.id.minus).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_MINUS).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButMinusClick();
             }
         });
-        findViewById(R.id.multiplication).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_MNOZ).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButMiltClick();
             }
         });
-        findViewById(R.id.division).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_DEL).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButDivClick();
             }
         });
-        findViewById(R.id.equality).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_RAVNO).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButEqualClick();
