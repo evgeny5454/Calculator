@@ -26,7 +26,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
 
         presenter = new CalculatorPresenter(this, new CalculatorImpl());
         resultText = findViewById(R.id.textView);
-        inputText = findViewById(R.id.textView2);
+        //inputText = findViewById(R.id.textView2);
 
         findViewById(R.id.button_0).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,9 +140,9 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     public void showResult(String result) {
         resultText.setText(result);
     }
-    @Override
-    public void showNumber(String str) {
-        inputText.setText(str);
-    }
+    //@Override
+    //public void showNumber(String str) {
+        //inputText.setText(str);
+    //}
 }
 

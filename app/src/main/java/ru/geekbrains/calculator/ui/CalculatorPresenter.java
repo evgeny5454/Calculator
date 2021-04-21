@@ -52,7 +52,7 @@ public class CalculatorPresenter {
         if (userInFirstNum) {
             argOne = Double.parseDouble(String.valueOf(userInputBuilder));
             userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
+            //view.showNumber(String.valueOf(userInputBuilder));
             num.clear();
             logic = "+";
         }
@@ -124,7 +124,7 @@ public class CalculatorPresenter {
     public void onButClealClick() {
         num.clear();
         view.showResult("");
-        view.showNumber("");
+        //view.showNumber("");
         argOne = 0;
         argTwo = 0;
         userInFirstNum = true;
@@ -144,7 +144,7 @@ public class CalculatorPresenter {
         if (userInFirstNum) {
             argOne = Double.parseDouble(String.valueOf(userInputBuilder));
             userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
+            //view.showNumber(String.valueOf(userInputBuilder));
             num.clear();
             logic = "-";
         }
@@ -154,7 +154,7 @@ public class CalculatorPresenter {
         if (userInFirstNum) {
             argOne = Double.parseDouble(String.valueOf(userInputBuilder));
             userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
+            //view.showNumber(String.valueOf(userInputBuilder));
             num.clear();
             logic = "*";
         }
@@ -164,7 +164,7 @@ public class CalculatorPresenter {
         if (userInFirstNum) {
             argOne = Double.parseDouble(String.valueOf(userInputBuilder));
             userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
+            //view.showNumber(String.valueOf(userInputBuilder));
             num.clear();
             logic = "/";
         }
