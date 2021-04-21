@@ -97,37 +97,37 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
                 presenter.onButClealClick();
             }
         });
-        findViewById(R.id.Butt_POINT).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_point).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButPointClick();
             }
         });
-        findViewById(R.id.Butt_PLUS).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButPlusClick();
             }
         });
-        findViewById(R.id.Butt_MINUS).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_sub).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButMinusClick();
             }
         });
-        findViewById(R.id.Butt_MNOZ).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_mult).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButMiltClick();
             }
         });
-        findViewById(R.id.Butt_DEL).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_div).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButDivClick();
             }
         });
-        findViewById(R.id.Butt_RAVNO).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.Butt_eqv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onButEqualClick();

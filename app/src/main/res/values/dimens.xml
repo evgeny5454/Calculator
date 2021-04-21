@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="but_text_size">40dp</dimen>
+    <dimen name="size_butt">80dp</dimen>
+    <dimen name="indent_butt">6dp</dimen>
+    <dimen name="app_marginTop">16dp</dimen>
+    <dimen name="logic_text_size">25sp</dimen>
+    <dimen name="result_text_size">60sp</dimen>
+</resources>
