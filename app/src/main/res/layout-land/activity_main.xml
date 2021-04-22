@@ -6,10 +6,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="671dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/text_logic_width"
+        android:layout_height="@dimen/text_logic_height"
         android:layout_marginTop="@dimen/app_marginTop"
-        android:text="@string/_0"
         android:textAlignment="textEnd"
         android:textSize="@dimen/logic_text_size"
         android:textStyle="italic"
@@ -19,8 +18,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="679dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/text_result_width"
+        android:layout_height="@dimen/text_result_height"
         android:text="@string/_0"
         android:textAlignment="textEnd"
         android:textSize="@dimen/result_text_size"
@@ -46,16 +45,28 @@
             android:theme="@style/Theme.Calculator" >
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_1"
-                android:text="@string/_1" />
+                android:id="@+id/Butt_9"
+                android:text="@string/_9" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_2"
-                android:text="@string/_2" />
+                android:id="@+id/Butt_8"
+                android:text="@string/_8" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_3"
-                android:text="@string/_3" />
+                android:id="@+id/Butt_7"
+                android:text="@string/_7" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Butt_mult"
+                android:text="@string/_mult" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Butt_div"
+                android:text="@string/_div" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Butt_C"
+                android:text="@string/_c" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Butt_4"
@@ -70,24 +81,30 @@
                 android:text="@string/_6" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_div"
-                android:text="@string/_div" />
+                android:id="@+id/Butt_add"
+                android:text="@string/_add" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_mult"
-                android:text="@string/_mult" />
+                android:id="@+id/Butt_sub"
+                android:text="@string/_sub" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_7"
-                android:text="@string/_7" />
+                android:id="@+id/Butt_eqv"
+                android:text="@string/_eqv"
+                android:layout_rowSpan="2"
+                android:layout_gravity="fill"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_8"
-                android:text="@string/_8" />
+                android:id="@+id/Butt_1"
+                android:text="@string/_1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_9"
-                android:text="@string/_9" />
+                android:id="@+id/Butt_2"
+                android:text="@string/_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Butt_3"
+                android:text="@string/_3" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Butt_0"
@@ -96,22 +113,6 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Butt_point"
                 android:text="@string/_point" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_add"
-                android:text="@string/_add" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_eqv"
-                android:text="@string/_eqv" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_sub"
-                android:text="@string/_sub" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/Butt_C"
-                android:text="@string/_c" />
         </GridLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
