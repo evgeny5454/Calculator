@@ -9,7 +9,6 @@
         android:layout_width="295dp"
         android:layout_height="39dp"
         android:layout_marginTop="@dimen/app_marginTop"
-        android:text="@string/_0"
         android:textAlignment="textEnd"
         android:textSize="@dimen/logic_text_size"
         android:textStyle="italic"
