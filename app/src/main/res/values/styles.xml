@@ -9,4 +9,31 @@
         <item name="android:insetLeft">@dimen/indent_butt</item>
         <item name="android:insetRight">@dimen/indent_butt</item>
     </style>
+    <style name="calc_button_style_2" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/but_text_size</item>
+        <item name="android:layout_width">@dimen/size_butt</item>
+        <item name="android:layout_height">@dimen/size_butt</item>
+        <item name="android:backgroundTint">#AF1616</item>
+        <item name="android:layout_marginTop">@dimen/indent_butt</item>
+        <item name="android:insetLeft">@dimen/indent_butt</item>
+        <item name="android:insetRight">@dimen/indent_butt</item>
+    </style>
+    <style name="calc_button_style_3" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/but_text_size</item>
+        <item name="android:layout_width">@dimen/size_butt</item>
+        <item name="android:layout_height">@dimen/size_butt</item>
+        <item name="android:backgroundTint">#8BC34A</item>
+        <item name="android:layout_marginTop">@dimen/indent_butt</item>
+        <item name="android:insetLeft">@dimen/indent_butt</item>
+        <item name="android:insetRight">@dimen/indent_butt</item>
+    </style>
+    <style name="calc_button_style_4" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/but_text_size</item>
+        <item name="android:layout_width">@dimen/size_butt</item>
+        <item name="android:layout_height">@dimen/size_butt</item>
+        <item name="android:backgroundTint">#2196F3</item>
+        <item name="android:layout_marginTop">@dimen/indent_butt</item>
+        <item name="android:insetLeft">@dimen/indent_butt</item>
+        <item name="android:insetRight">@dimen/indent_butt</item>
+    </style>
 </resources>

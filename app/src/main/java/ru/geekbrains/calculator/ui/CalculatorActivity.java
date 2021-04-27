@@ -2,9 +2,11 @@ package ru.geekbrains.calculator.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -12,23 +14,42 @@ import java.util.List;
 
 import ru.geekbrains.calculator.R;
 import ru.geekbrains.calculator.domain.CalculatorImpl;
+import ru.geekbrains.calculator.domain.Theme;
+import ru.geekbrains.calculator.domain.ThemeStorage;
 
 public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
 
     private CalculatorPresenter presenter;
     private TextView resultText;
     private TextView UserInputText;
+    private ThemeStorage themeStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        themeStorage = new ThemeStorage(this);
+        setTheme(themeStorage.getCurrentTheme().getRes());
+
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.textView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalculatorActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         presenter = new CalculatorPresenter(this, new CalculatorImpl());
         resultText = findViewById(R.id.textView);
         UserInputText = findViewById(R.id.textView2);
 
         View.OnClickListener buttonClicked = new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View v) {
 
@@ -120,6 +141,11 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.Butt_add).setOnClickListener(buttonClicked);
         findViewById(R.id.Butt_sub).setOnClickListener(buttonClicked);
         findViewById(R.id.Butt_point).setOnClickListener(buttonClicked);
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        recreate();
     }
 
     @Override
