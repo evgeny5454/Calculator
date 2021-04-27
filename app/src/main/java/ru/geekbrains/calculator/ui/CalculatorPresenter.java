@@ -2,194 +2,89 @@ package ru.geekbrains.calculator.ui;
 
 import java.util.ArrayList;
 
+import ru.geekbrains.calculator.domain.CalcHendler;
 import ru.geekbrains.calculator.domain.Calculator;
 import ru.geekbrains.calculator.domain.Operation;
+
+import static java.lang.Math.floor;
 
 public class CalculatorPresenter {
 
     private CalculatorView view;
-    private Calculator calculator;
-    ArrayList<String> num = new ArrayList<>();
-    boolean userInFirstNum = true;
-    private double argOne = 0;
-    private double argTwo = 0;
-    private double res;
-    StringBuilder userInputBuilder;
-    String logic = "";
+    CalcHendler hendler = new CalcHendler();
+
     public CalculatorPresenter(CalculatorView view, Calculator calculator) {
         this.view = view;
-        this.calculator = calculator;
     }
 
     public void onBut_0Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("0");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("0")));
+    }
     public void onBut_1Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("1");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("1")));
+    }
     public void onBut_2Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("2");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("2")));
+    }
     public void onButPlusClick() {
-        if (userInFirstNum) {
-            argOne = Double.parseDouble(String.valueOf(userInputBuilder));
-            userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
-            num.clear();
-            logic = "+";
-        }
+
+        view.showUserInput(String.valueOf(hendler.LogicOperation(" + ")));
     }
 
     public void onBut_3Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("3");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("3")));
+    }
     public void onBut_4Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("4");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("4")));
+    }
     public void onBut_5Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("5");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("5")));
+    }
     public void onBut_6Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("6");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("6")));
+    }
     public void onBut_7Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("7");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("7")));
+    }
     public void onBut_8Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("8");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("8")));
+    }
     public void onBut_9Click() {
-        userInputBuilder = new StringBuilder();
-        num.add("9");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setNumber("9")));
+    }
     public void onButClealClick() {
-        num.clear();
+        hendler.clear();
         view.showResult("");
-        view.showNumber("");
-        argOne = 0;
-        argTwo = 0;
-        userInFirstNum = true;
-        logic = "";
+        view.showUserInput("");
     }
-
     public void onButPointClick() {
-        userInputBuilder = new StringBuilder();
-        num.add(".");
-        for (String s : num) {
-            userInputBuilder.append(s);
-        }
-        view.showResult(String.valueOf(userInputBuilder));
-    }
 
+        view.showResult(String.valueOf(hendler.setPoint(".")));
+    }
     public void onButMinusClick() {
-        if (userInFirstNum) {
-            argOne = Double.parseDouble(String.valueOf(userInputBuilder));
-            userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
-            num.clear();
-            logic = "-";
-        }
-    }
 
+        view.showUserInput(String.valueOf(hendler.LogicOperation(" - ")));
+    }
     public void onButMiltClick() {
-        if (userInFirstNum) {
-            argOne = Double.parseDouble(String.valueOf(userInputBuilder));
-            userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
-            num.clear();
-            logic = "*";
-        }
-    }
 
+        view.showUserInput(String.valueOf(hendler.LogicOperation(" * ")));
+    }
     public void onButDivClick() {
-        if (userInFirstNum) {
-            argOne = Double.parseDouble(String.valueOf(userInputBuilder));
-            userInFirstNum = false;
-            view.showNumber(String.valueOf(userInputBuilder));
-            num.clear();
-            logic = "/";
-        }
-    }
 
+        view.showUserInput(String.valueOf(hendler.LogicOperation(" / ")));
+    }
     public void onButEqualClick() {
-        if (!userInFirstNum) {
-            argTwo = Double.parseDouble(String.valueOf(userInputBuilder));
-            userInFirstNum = true;
-            num.clear();
-        }
-        switch (logic) {
-            case ("+"):
-                res = calculator.binaryOperation(argOne, argTwo, Operation.ADD);
-                break;
-            case ("-"):
-                res = calculator.binaryOperation(argOne, argTwo, Operation.SUB);
-                break;
-            case ("/"):
-                res = calculator.binaryOperation(argOne, argTwo, Operation.DIV);
-                break;
-            case ("*"):
-                res = calculator.binaryOperation(argOne, argTwo, Operation.MULT);
-                break;
-        }
-        view.showResult(String.valueOf(res));
+        view.showResult(String.valueOf(hendler.Equaly()));
+        view.showUserInput(hendler.UserInputString());
     }
 }

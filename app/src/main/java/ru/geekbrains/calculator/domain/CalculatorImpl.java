@@ -1,6 +1,7 @@
 package ru.geekbrains.calculator.domain;
 
 public class CalculatorImpl implements Calculator {
+
     @Override
     public double binaryOperation(double argOne, double argTwo, Operation operation) {
         switch (operation) {

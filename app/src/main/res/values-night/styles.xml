@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calc_button_style" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/but_text_size</item>
+        <item name="android:layout_width">@dimen/size_butt</item>
+        <item name="android:layout_height">@dimen/size_butt</item>
+        <item name="android:backgroundTint">#24451B</item>
+        <item name="android:layout_marginTop">@dimen/indent_butt</item>
+        <item name="android:insetLeft">@dimen/indent_butt</item>
+        <item name="android:insetRight">@dimen/indent_butt</item>
+    </style>
+</resources>

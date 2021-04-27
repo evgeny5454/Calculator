@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logic_text_size">25sp</dimen>
+    <dimen name="result_text_size">40sp</dimen>
+    <dimen name="app_marginTop">4dp</dimen>
+    <dimen name="text_logic_width">482dp</dimen>
+    <dimen name="text_logic_height">30dp</dimen>
+    <dimen name="text_result_width">501dp</dimen>
+    <dimen name="text_result_height">52dp</dimen>
+    <dimen name="size_butt">15dp</dimen>
+    <dimen name="but_text_size">20dp</dimen>
+</resources>
