@@ -55,12 +55,15 @@ public class CalcHendler  {
         num.clear();
         pointInp = true;
         userInpFirst = true;
+        argOne = 0;
+        argTwo = 0;
+        //result = 0;
     }
 
     public String LogicOperation(String stringLogic) {
-        stringLogicResult = stringLogic;
-        if (userInpFirst) {
 
+        if (userInpFirst) {
+            stringLogicResult = stringLogic;
             argOne = Double.parseDouble(String.valueOf(inputStrBuild));
             userInpFirst = false;
             pointInp = true;
@@ -68,9 +71,10 @@ public class CalcHendler  {
             return (argOne + stringLogic);
 
         } else if (setResult) {
-
+            Equaly();
             argOne = result;
             num.clear();
+            stringLogicResult = stringLogic;
             return (argOne + stringLogic);
 
         } else {
@@ -95,18 +99,30 @@ public class CalcHendler  {
             case (" + "):
                 res = (calculator.binaryOperation(argOne, argTwo, Operation.ADD));
                 result = res;
+                //argOne = 0;
+                //argTwo = 0;
+                //stringLogicResult ="";
                 break;
             case (" - "):
                 res = (calculator.binaryOperation(argOne, argTwo, Operation.SUB));
                 result = res;
+                //argOne = 0;
+                //argTwo = 0;
+                //stringLogicResult ="";
                 break;
             case (" * "):
                 res = (calculator.binaryOperation(argOne, argTwo, Operation.MULT));
                 result = res;
+                //argOne = 0;
+                //argTwo = 0;
+                //stringLogicResult ="";
                 break;
             case (" / "):
                 res = (calculator.binaryOperation(argOne, argTwo, Operation.DIV));
                 result = res;
+                //argOne = 0;
+                //argTwo = 0;
+                //stringLogicResult ="";
                 break;
         }
 
